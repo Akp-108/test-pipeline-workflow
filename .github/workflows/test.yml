@@ -1,5 +1,5 @@
 name: Deployment React Project
-on: [push, workflow_dispatch]
+on: ["push", "workflow_dispatch"]
 job:
   test:
     runs-on: ubuntu-latest
