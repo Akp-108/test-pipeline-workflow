@@ -1,0 +1,24 @@
+name: Deployment React Project
+on: [push, workflow_dispatch]
+job:
+  test:
+    runs-on: ubuntu-latest
+    steps: 
+     - name: get code
+       uses: action/checkout@v3
+     - name: install NodeJS
+       uses: action/setup-node@v3
+       with:
+        node-version: 18
+      
+     - name: install node module
+       run: npm install
+     
+     - name: Build the code
+       run: npm build
+     - name: Test the code
+       run: npm test
+     - name: start the app
+       run: npm run dev
+     - name: run the code 
+       run: echo our react app is up and running        
