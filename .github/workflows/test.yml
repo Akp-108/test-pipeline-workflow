@@ -1,6 +1,6 @@
 name: Deployment React Project
 on: ["push", "workflow_dispatch"]
-job:
+jobs:
   test:
     runs-on: ubuntu-latest
     steps: 
